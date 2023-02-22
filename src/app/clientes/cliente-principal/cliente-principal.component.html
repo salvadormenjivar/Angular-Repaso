@@ -1,0 +1,21 @@
+<p>Componente cliente principal funcionando</p>
+
+<h3>Lista de Clientes</h3>
+<hr>
+<ul *ngFor="let cliente of listaClientes">
+    <li>
+       {{ cliente.nombre }} - {{ cliente.edad }}
+    </li> 
+</ul>
+
+<h3>Agregar cliente</h3>
+<hr>
+<div style="width: 50%;"> 
+    <form (ngSubmit)="agregar()">
+        <input type="text" placeholder="Nombre" name="nombre" [(ngModel)] = "nuevoCliente.nombre">
+        <input type="number" placeholder="Edad" name="edad"  [(ngModel)] = "nuevoCliente.edad">
+        <button type="submit">
+            Agregar
+        </button>
+    </form>
+</div>
