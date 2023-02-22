@@ -17,20 +17,4 @@ export class ClientePrincipalComponent {
       edad: 25,
     },
   ];
-  nuevoCliente: ICliente = {
-    nombre: '',
-    edad: 0,
-  };
-
-  agregar() {
-    if (this.nuevoCliente.nombre.length === 0) {
-      return;
-    }
-    //console.log(this.nuevoCliente);
-    this.listaClientes.push(this.nuevoCliente);
-    this.nuevoCliente = {
-      nombre: '',
-      edad: 0,
-    };
-  }
 }
