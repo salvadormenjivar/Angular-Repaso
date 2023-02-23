@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ICliente } from '../interfaces/cliente.interface';
+import { ClienteService } from '../services/cliente.service';
 
 @Component({
   selector: 'app-cliente-principal',
@@ -7,14 +8,10 @@ import { ICliente } from '../interfaces/cliente.interface';
   styleUrls: ['./cliente-principal.component.css'],
 })
 export class ClientePrincipalComponent {
-  listaClientes: ICliente[] = [
-    {
-      nombre: 'Salvador',
-      edad: 15,
-    },
-    {
-      nombre: 'Rodri',
-      edad: 25,
-    },
-  ];
+
+  get listaClientes(){
+    return this.clienteService.listaClientes;
+  }
+  
+  constructor(private clienteService:ClienteService){}
 }

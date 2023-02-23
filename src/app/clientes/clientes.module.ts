@@ -4,6 +4,7 @@ import { ClientePrincipalComponent } from './cliente-principal/cliente-principal
 import { FormsModule } from '@angular/forms';
 import { ListaComponent } from './lista/lista.component';
 import { NuevoComponent } from './nuevo/nuevo.component';
+import { ClienteService } from './services/cliente.service';
 
 
 
@@ -20,5 +21,8 @@ import { NuevoComponent } from './nuevo/nuevo.component';
     CommonModule,
     FormsModule
   ],  
+  providers:[
+    ClienteService
+  ]
 })
 export class ClientesModule { }
